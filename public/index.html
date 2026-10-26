@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <h1 class="logo">Weather Information</h1>
+            <p>Weather updates for your city</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section" aria-labelledby="search-heading">
+            <h2 id="search-heading">Check the Weather</h2>
+
+            <form id="search-form" class="search-form">
+                <label class="visually-hidden" for="city-input">
+                    Enter city name
+                </label>
+                <input
+                    type="text"
+                    id="city-input"
+                    name="city"
+                    placeholder="Enter city name"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="search-button">Search</button>
+            </form>
+
+            <p id="status-message" class="status-message" role="status">
+                Enter a city to check its weather.
+            </p>
+        </section>
+
+        <section class="weather-section" aria-labelledby="current-heading">
+            <h2 id="current-heading">Current Weather</h2>
+
+            <div class="current-weather-card">
+                <div class="current-main">
+                    <div>
+                        <h3 id="location-name" class="location-name">Hyderabad</h3>
+                        <p id="weather-description" class="weather-description">
+                            Weather information will appear here.
+                        </p>
+                    </div>
+
+                    <div class="temperature-display">
+                        <span id="weather-icon" class="weather-icon" aria-hidden="true">🌤️</span>
+                        <p><span id="temperature">--</span>°C</p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <article class="detail-card">
+                        <h3>Humidity</h3>
+                        <p><span id="humidity">--</span>%</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Wind Speed</h3>
+                        <p><span id="wind-speed">--</span> km/h</p>
+                    </article>
+                    <article class="detail-card">
+                        <h3>Feels Like</h3>
+                        <p><span id="feels-like">--</span>°C</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-section" aria-labelledby="forecast-heading">
+            <h2 id="forecast-heading">5-Day Forecast</h2>
+            <div id="forecast-container" class="forecast-grid">
+                <article class="forecast-card">
+                    <h3>Forecast</h3>
+                    <p>Weather data will appear here.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Weather Information Project | Powered by Open-Meteo</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
